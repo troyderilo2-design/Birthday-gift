@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Gabb 💜🦋</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background:
+        radial-gradient(circle at top, #5b237a, transparent 40%),
+        linear-gradient(135deg, #100018, #240032, #3c0757, #16001f);
+    color: white;
+    overflow-x: hidden;
+}
+
+/* =========================
+   INTRO
+========================= */
+
+#intro {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        radial-gradient(circle, #541477, #17001f 70%);
+
+    transition: opacity 1.5s ease;
+}
+
+.intro-content {
+    text-align: center;
+    padding: 25px;
+    animation: introAppear 2s ease;
+}
+
+.intro-butterfly {
+    font-size: 75px;
+    animation: butterflyFloat 2s infinite ease-in-out;
+}
+
+.intro-content h1 {
+    font-size: clamp(30px, 8vw, 55px);
+    margin: 20px 0 10px;
+
+    color: white;
+
+    text-shadow:
+        0 0 15px #c77dff,
+        0 0 30px #9d4edd;
+}
+
+.intro-content p {
+    color: #e0aaff;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+.open-letter {
+    border: 1px solid #e0aaff;
+    background: rgba(199, 125, 255, 0.15);
+    color: white;
+
+    padding: 15px 30px;
+    border-radius: 50px;
+
+    font-size: 17px;
+    cursor: pointer;
+    transition: .3s;
+
+    box-shadow:
+        0 0 20px rgba(199,125,255,.4);
+}
+
+.open-letter:hover {
+    background: #9d4edd;
+    transform: scale(1.08);
+
+    box-shadow:
+        0 0 40px #c77dff;
+}
+
+@keyframes introAppear {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes butterflyFloat {
+    0%,100% {
+        transform: translateY(0) rotate(-5deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(5deg);
+    }
+}
+
+/* =========================
+   MAIN
+========================= */
+
+#main {
+    display: none;
+}
+
+/* =========================
+   STARS
+========================= */
+
+.star {
+    position: fixed;
+
+    width: 3px;
+    height: 3px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    opacity: .7;
+
+    animation: twinkle 3s infinite;
+}
+
+@keyframes twinkle {
+
+    0%,100% {
+        opacity: .2;
+        transform: scale(.5);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+}
+
+/* =========================
+   BUTTERFLIES
+========================= */
+
+.butterfly {
+    position: fixed;
+
+    left: -100px;
+
+    z-index: 10;
+
+    font-size: 35px;
+
+    pointer-events: none;
+
+    filter:
+        drop-shadow(0 0 8px #c77dff)
+        drop-shadow(0 0 15px #9d4edd);
+
+    animation: flyAcross linear infinite;
+}
+
+.b1 {
+    top: 15%;
+    animation-duration: 15s;
+}
+
+.b2 {
+    top: 45%;
+    font-size: 25px;
+    animation-duration: 20s;
+    animation-delay: 4s;
+}
+
+.b3 {
+    top: 70%;
+    font-size: 45px;
+    animation-duration: 18s;
+    animation-delay: 7s;
+}
+
+.b4 {
+    top: 85%;
+    font-size: 28px;
+    animation-duration: 23s;
+    animation-delay: 2s;
+}
+
+@keyframes flyAcross {
+
+    0% {
+        transform:
+            translateX(-100px)
+            translateY(0)
+            rotate(0deg);
+    }
+
+    25% {
+        transform:
+            translateX(30vw)
+            translateY(-80px)
+            rotate(15deg);
+    }
+
+    50% {
+        transform:
+            translateX(60vw)
+            translateY(70px)
+            rotate(-15deg);
+    }
+
+    75% {
+        transform:
+            translateX(90vw)
+            translateY(-60px)
+            rotate(10deg);
+    }
+
+    100% {
+        transform:
+            translateX(120vw)
+            translateY(30px)
+            rotate(-10deg);
+    }
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 30px 20px;
+}
+
+.hero-small {
+    color: #e0aaff;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    font-size: 14px;
+}
+
+.hero h1 {
+
+    font-size: clamp(60px, 14vw, 130px);
+
+    margin-top: 10px;
+
+    color: white;
+
+    text-shadow:
+        0 0 15px #c77dff,
+        0 0 35px #9d4edd,
+        0 0 70px #7b2cbf;
+
+}
+
+.hero h2 {
+
+    font-size: clamp(25px, 6vw, 45px);
+
+    color: #e0aaff;
+
+    margin-top: 10px;
+
+}
+
+.hero-butterfly {
+
+    font-size: 70px;
+
+    margin: 20px;
+
+    animation:
+        butterflyFloat 2s infinite ease-in-out;
+
+}
+
+.typing {
+
+    margin-top: 25px;
+
+    color: #f1d9ff;
+
+    font-size: 18px;
+
+    min-height: 30px;
+
+}
+
+.scroll-button {
+
+    margin-top: 35px;
+
+    padding: 14px 30px;
+
+    border-radius: 50px;
+
+    border: 1px solid #d8a4ff;
+
+    background: rgba(157,78,221,.2);
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    transition: .3s;
+
+}
+
+.scroll-button:hover {
+
+    background: #9d4edd;
+
+    transform: translateY(-4px);
+
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.section {
+
+    padding: 80px 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+.card {
+
+    width: 100%;
+
+    max-width: 850px;
+
+    padding: 45px;
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,.08);
+
+    border: 1px solid rgba(224,170,255,.35);
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 0 50px rgba(157,78,221,.2);
+
+}
+
+.card h2 {
+
+    text-align: center;
+
+    color: #e0aaff;
+
+    margin-bottom: 30px;
+
+    font-size: 32px;
+
+}
+
+.card p {
+
+    color: #f6e9ff;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    margin-bottom: 22px;
+
+}
+
+.highlight {
+
+    color: #e0aaff;
+
+    font-weight: bold;
+
+}
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline-title {
+
+    text-align: center;
+
+    font-size: 38px;
+
+    color: #e0aaff;
+
+    margin-bottom: 40px;
+
+}
+
+.timeline {
+
+    max-width: 800px;
+
+    margin: auto;
+
+}
+
+.timeline-item {
+
+    padding: 25px;
+
+    margin: 25px 0;
+
+    border-left: 3px solid #c77dff;
+
+    background: rgba(255,255,255,.06);
+
+    border-radius: 0 20px 20px 0;
+
+    transition: .3s;
+
+}
+
+.timeline-item:hover {
+
+    transform: translateX(10px);
+
+    background: rgba(157,78,221,.15);
+
+}
+
+.timeline-item h3 {
+
+    color: #e0aaff;
+
+    margin-bottom: 8px;
+
+}
+
+.timeline-item p {
+
+    color: #ead9f5;
+
+    line-height: 1.6;
+
+}
+
+/* =========================
+   PHOTOS
+========================= */
+
+.photos {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-top: 25px;
+
+}
+
+.photo {
+
+    height: 230px;
+
+    border-radius: 20px;
+
+    border: 1px solid #c77dff;
+
+    background:
+        rgba(157,78,221,.1);
+
+    overflow: hidden;
+
+}
+
+.photo img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform .5s ease;
+
+}
+
+.photo:hover img {
+
+    transform: scale(1.08);
+
+}
+
+/* =========================
+   FINAL
+========================= */
+
+.final {
+
+    text-align: center;
+
+    padding: 100px 20px;
+
+}
+
+.final h2 {
+
+    font-size: clamp(35px, 8vw, 65px);
+
+    color: #e0aaff;
+
+    text-shadow:
+        0 0 20px #9d4edd;
+
+}
+
+.final p {
+
+    margin-top: 20px;
+
+    font-size: 19px;
+
+    color: #ead9f5;
+
+    line-height: 1.7;
+
+}
+
+/* =========================
+   MUSIC BUTTON
+========================= */
+
+.music {
+
+    position: fixed;
+
+    right: 20px;
+
+    bottom: 20px;
+
+    z-index: 100;
+
+    width: 55px;
+
+    height: 55px;
+
+    border-radius: 50%;
+
+    border: 1px solid #e0aaff;
+
+    background: rgba(157,78,221,.8);
+
+    color: white;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    box-shadow: 0 0 20px #9d4edd;
+
+}
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.heart {
+
+    position: fixed;
+
+    bottom: -50px;
+
+    font-size: 20px;
+
+    animation: heartFloat 7s linear forwards;
+
+    pointer-events: none;
+
+    z-index: 20;
+
+}
+
+@keyframes heartFloat {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity: 0;
+
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px) {
+
+    .intro-content h1 {
+        font-size: 34px;
+    }
+
+    .intro-content p {
+        font-size: 15px;
+    }
+
+    .hero {
+        padding: 20px 15px;
+    }
+
+    .hero h1 {
+        font-size: 65px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .hero-butterfly {
+        font-size: 55px;
+    }
+
+    .typing {
+        font-size: 15px;
+    }
+
+    .section {
+        padding: 45px 12px;
+    }
+
+    .card {
+        padding: 25px 20px;
+        border-radius: 22px;
+    }
+
+    .card h2 {
+        font-size: 26px;
+    }
+
+    .card p {
+        font-size: 15px;
+        line-height: 1.75;
+    }
+
+    .timeline-title {
+        font-size: 30px;
+    }
+
+    .photos {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .photo {
+
+        height: 300px;
+
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- =========================
+     INTRO SCREEN
+========================= -->
+
+<div id="intro">
+
+    <div class="intro-content">
+
+        <div class="intro-butterfly">
+            🦋
+        </div>
+
+        <h1>
+            Someone left you a message...
+        </h1>
+
+        <p>
+            A little something for your 18th birthday 💜
+        </p>
+
+        <button
+            class="open-letter"
+            onclick="openWebsite()">
+
+            💌 Open Message
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     MAIN WEBSITE
+========================= -->
+
+<div id="main">
+
+
+<!-- BUTTERFLIES -->
+
+<div class="butterfly b1">🦋</div>
+<div class="butterfly b2">🦋</div>
+<div class="butterfly b3">🦋</div>
+<div class="butterfly b4">🦋</div>
+
+
+<!-- STARS -->
+
+<div class="star" style="top:10%;left:15%;"></div>
+<div class="star" style="top:20%;left:70%;"></div>
+<div class="star" style="top:35%;left:30%;"></div>
+<div class="star" style="top:50%;left:85%;"></div>
+<div class="star" style="top:65%;left:10%;"></div>
+<div class="star" style="top:75%;left:55%;"></div>
+<div class="star" style="top:90%;left:80%;"></div>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="hero-small">
+        A birthday message for
+    </div>
+
+    <div class="hero-butterfly">
+        🦋
+    </div>
+
+    <h1>
+        GABB
+    </h1>
+
+    <h2>
+        Happy 18th Birthday! 🎂
+    </h2>
+
+    <div class="typing" id="typing"></div>
+
+    <button
+        class="scroll-button"
+        onclick="document.getElementById('letter').scrollIntoView({behavior:'smooth'})">
+
+        💌 Read Your Letter
+
+    </button>
+
+</section>
+
+
+<!-- =========================
+     LETTER
+========================= -->
+
+<section
+    class="section"
+    id="letter">
+
+    <div class="card">
+
+        <h2>
+            💜 To My Bestfriend, Gabb 🦋
+        </h2>
+
+        <p>
+            HELLO GABB HAPPY 18TH BIRTHDAY GURLLL!!! 🎉💜
+        </p>
+
+        <p>
+            It’s honestly crazy to think that we’ve been friends for
+            <span class="highlight">
+                10 years already
+            </span>,
+            (binilang ko talaga simula grade 2) and we’ve shared so many
+            memories, random moments, laughs, and even some struggles
+            along the way.
+        </p>
+
+        <p>
+            I’m really grateful that I got to have you as my best friend
+            through all these years, thankyou so much kase always ka
+            andyan since you know may mga times na natatanga talaga ako
+            and andyan ka lagi para mag bigay advice huuhuhuhu sorry na
+            pero sa karamihan ikaw pa talaga nakaka witness, helppp!!
+            BBABWHABHABA 😭😭 pero anyway,
+        </p>
+
+        <p>
+            Now that you’re turning 18 and starting a new chapter in your
+            life, I hope you continue chasing your dreams and never give
+            up on the things you truly want.
+        </p>
+
+        <p>
+            I know there will be challenges along the way, but I hope you
+            always believe in yourself and remember how far you’ve already
+            come.
+            <span class="highlight">
+                YES FIGHTING GURL!!! SO PROUD OF YOU ALWAYSSS!!!
+            </span>
+        </p>
+
+        <p>
+            I hope you make tons of new memories, meet new people,
+            experience new things, and enjoy every moment of this new
+            chapter.
+        </p>
+
+        <p>
+            And no matter where life takes us or how much things change,
+            I hope you know that I’ll always be here for you.
+            You can always count on me whenever you need someone to talk
+            to, laugh with
+            <span class="highlight">
+                (eu teh ta ako na sana baga pirmi mo tiga ulukan inezz emss)
+            </span>,
+            or just be there.
+        </p>
+
+        <p>
+            SHALLAA 10 years na dinn pala and im so happy na bff parin
+            kita gurlll and looking forward sa future natin tihh,
+            ikaw talaga ang manlilibre bako ako :pp
+        </p>
+
+        <p style="text-align:center;font-size:24px;color:#e0aaff;">
+            🦋💜🦋
+        </p>
+
+        <p style="text-align:center;">
+            Happy 18th, Gabb! 🎂
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     10 YEARS
+========================= -->
+
+<section class="section">
+
+    <div style="width:100%;max-width:850px;">
+
+        <h2 class="timeline-title">
+            🕐 10 Years of Us
+        </h2>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+
+                <h3>
+                    🌱 Grade 2
+                </h3>
+
+                <p>
+                    I remember nung grade 2 tiga bigyan mo 'ko ki five pesos ta kaiwal mo 
+                    sabi mo dae ta siya kaapin BWHABHAAHAHBA (sinuhulan yarnch) tbh ka swerte ko kay 
+                    kamong duwa ang naging bff ko lalo na kay saint na always ko nakakaiba una ko talaga mag             pinsan kamo BAHAHAHAHAHA maling akala pala ako dun gaizz all these years??? HUHUHUHUUHUHU
+                </p>
+
+            </div>
+
+            <div class="timeline-item">
+
+                <h3>
+                    😂 The Random Years
+                </h3>
+
+                <p>
+                    Sa lahat ng tao na kilala ko bakit ikaw lagi tihh nakaka witness ng katangahan ko sa buhay HUHUHUHUHHUH like lahat nalang talaga gurl pero okay lang yan gaiz ang mahalaga may napapasaya tayong tao gaizz pirmi nalang intatawahan ehh ems pero thankyousomuch sa mga advice ahh liek leget 
+    
+                </p>
+
+            </div>
+
+            <div class="timeline-item">
+
+                <h3>
+                    🫂 Growing Up
+                </h3>
+
+                <p>
+                    We've both changed and grown so much,
+                    but somehow we're still here.
+                    Still annoying each other.
+                    Still laughing.
+                    Still best friends.
+                </p>
+
+            </div>
+
+            <div class="timeline-item">
+
+                <h3>
+                    🎂 18 Years Old
+                </h3>
+
+                <p>
+                    And now you're officially 18!
+                    Here's to a new chapter, new adventures,
+                    and hopefully another 10 years of friendship.
+                    🦋💜
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PHOTOS
+========================= -->
+
+<section class="section">
+
+    <div class="card">
+
+        <h2>
+            📸 Our Memories
+        </h2>
+
+        <p style="text-align:center;">
+            10 years of memories with you. 💜
+        </p>
+
+        <div class="photos">
+
+            <div class="photo">
+                <img src="photo1.jpeg" alt="Memory 1">
+            </div>
+
+            <div class="photo">
+                <img src="photo2.jpg" alt="Memory 2">
+            </div>
+
+            <div class="photo">
+                <img src="photo3.jpeg" alt="Memory 3">
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FINAL MESSAGE
+========================= -->
+
+<section class="final">
+
+    <h2>
+        One Last Thing... 💌
+    </h2>
+
+    <p>
+
+        No matter how old we get...
+
+        <br>
+
+        no matter how much things change...
+
+        <br>
+
+        and no matter where life takes us...
+
+        <br><br>
+
+        <strong style="color:#e0aaff;">
+            I'll always be your best friend. 🦋💜
+        </strong>
+
+        <br><br>
+
+        10 years down.
+
+        <br>
+
+        Many, many more to go.
+
+        <br><br>
+
+        HAPPY 18TH GURLLL!!! 🎂🥳
+
+    </p>
+
+    <div style="font-size:60px;margin-top:40px;">
+        🦋💜🦋
+    </div>
+
+</section>
+
+
+<!-- MUSIC BUTTON -->
+
+<button
+    class="music"
+    onclick="toggleMusic()">
+
+    🎵
+
+</button>
+
+
+</div>
+
+
+<!-- =========================
+     YOUR MUSIC
+========================= -->
+
+<audio id="music" loop>
+
+    <source
+        src="birthday-song.mp3"
+        type="audio/mpeg">
+
+</audio>
+
+
+<script>
+
+/* =========================
+   OPEN WEBSITE
+========================= */
+
+function openWebsite() {
+
+    const intro =
+        document.getElementById("intro");
+
+    const main =
+        document.getElementById("main");
+
+    intro.style.opacity = "0";
+
+    setTimeout(() => {
+
+        intro.style.display = "none";
+
+        main.style.display = "block";
+
+        startTyping();
+
+    }, 1200);
+
+}
+
+
+/* =========================
+   TYPING EFFECT
+========================= */
+
+const text =
+    "10 years of friendship... and we're still here. 🦋💜";
+
+let index = 0;
+
+function startTyping() {
+
+    const typing =
+        document.getElementById("typing");
+
+    function type() {
+
+        if (index < text.length) {
+
+            typing.innerHTML +=
+                text.charAt(index);
+
+            index++;
+
+            setTimeout(type, 55);
+
+        }
+
+    }
+
+    type();
+
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+function createHeart() {
+
+    const heart =
+        document.createElement("div");
+
+    heart.className =
+        "heart";
+
+    const hearts = [
+        "💜",
+        "💗",
+        "💖",
+        "🦋",
+        "✨"
+    ];
+
+    heart.innerHTML =
+        hearts[
+            Math.floor(
+                Math.random() * hearts.length
+            )
+        ];
+
+    heart.style.left =
+        Math.random() * 100 + "vw";
+
+    heart.style.animationDuration =
+        (5 + Math.random() * 4) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+
+        heart.remove();
+
+    }, 9000);
+
+}
+
+setInterval(createHeart, 1300);
+
+
+/* =========================
+   MUSIC
+========================= */
+
+function toggleMusic() {
+
+    const music =
+        document.getElementById("music");
+
+    const button =
+        document.querySelector(".music");
+
+    if (music.paused) {
+
+        music.play();
+
+        button.innerHTML = "⏸️";
+
+    } else {
+
+        music.pause();
+
+        button.innerHTML = "🎵";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
